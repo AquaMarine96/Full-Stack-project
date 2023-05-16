@@ -1,0 +1,27 @@
+{
+  "name": "y",
+  "version": "0.0.0",
+  "description": "student services app",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AquaMarine96/Full-Stack-project.git"
+  },
+  "keywords": [
+    "web",
+    "compass"
+  ],
+  "author": "Andreas Moraitis, Fotis Hrodotou",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/AquaMarine96/Full-Stack-project/issues"
+  },
+  "homepage": "https://github.com/AquaMarine96/Full-Stack-project#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7"
+  }
+}
