@@ -1,0 +1,9 @@
+.secondary-buttons-hidden,.signup-form, .login-form{
+    display: none;
+}
+
+
+
+body{
+    background-color: #781010;
+}

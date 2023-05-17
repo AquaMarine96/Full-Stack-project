@@ -4,26 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel ="stylesheet" href = "Homepage-Style.css"/>
-    <script defer src = "form.js"></script>
+    <title>Student Compass Login</title>
+    <link rel = "stylesheet" href = "LogStyle.css"/>
 </head>
 <body>
+    <img src = "/logo.png">
+    <div class ="primary-buttons">
+        <button id = "user">Student</button>
+        <button id = "admin">Staff</button>
+    </div>
+    <div class ="secondary-buttons-hidden">
+        <button id = "sign-up">Sign Up</button>
+        <button id = "log-in">Log In</button>
+    </div>
+    <div class ="login-form">
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="log-username" name="username" placeholder="Your username.."><br><br>
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" placeholder="Your password.."><br><br>
+            <button type = "submit" id = "log-submit">Log In</button>
+        </form>
+    </div>
     <div class="signup-form">
         <form>
             <label for="username">Username</label>
-            <input type="text" id="sign-username" name="username" placeholder="Your username..">
+            <input type="text" id="sign-username" name="username" placeholder="Your username.."><br><br>
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Your email..">
+            <input type="text" id="email" name="email" placeholder="Your email.."><br><br>
             <label for="password">Password</label>
-            <input type="text" id="password" name="password" placeholder="Your password..">
+            <input type="text" id="password" name="password" placeholder="Your password.."><br><br>
             <label for="password">Confirm Password</label>
-            <input type="text" id="password2" name="password" placeholder="Your password..">
-            <button type = "submit" id = "log-submit">Sign up</button>
+            <input type="text" id="password2" name="password" placeholder="Your password.."><br><br>
+            <button type = "submit" id = "sign-submit">Sign up</button><br>
         </form>
         
     </div>
-    
+    <script>
+        let studButton = document.querySelector("#user");
+        let staffButton = document.querySelector("#admin");
+
+        studButton.addEventListener("click", ()=> {
+            document.querySelector(".secondary-buttons-hidden").style.display = "block";
+            document.querySelector(".primary-buttons").style.display = "none";
+        })
+        staffButton.addEventListener("click", ()=> {
+            document.querySelector(".login-form").style.display = "block";
+            document.querySelector(".primary-buttons").style.display = "none";
+        })
+
+        let signUpButton = document.querySelector("#sign-up");
+        let logInButton = document.querySelector("#log-in");
+
+        signUpButton.addEventListener("click", ()=> {
+            document.querySelector(".signup-form").style.display = "block";
+            document.querySelector(".secondary-buttons-hidden").style.display = "none";
+        })
+
+        logInButton.addEventListener("click", ()=> {
+            document.querySelector(".login-form").style.display = "block";
+            document.querySelector(".secondary-buttons-hidden").style.display = "none";
+        })
+
+        let logSubmit = document.querySelector("#log-submit");
+        let signSubmit = document.querySelector("#sign-submit");
+
+
+    </script>
 </body>
 </html>
-
