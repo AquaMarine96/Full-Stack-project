@@ -1,20 +1,31 @@
 let express = require('express');
-let hbs = require('handlebars');
-let path = require('path');
+let hbs = require('hbs');
+
 
 const app = express();
 const port = 3000;
 
+hbs.registerPartials(__dirname + '/views/partials');
+app.set('views', __dirname + '/views');
+app.set('view engine', 'hbs');
 
-app.get('/', (req, res) => {
-    //res.send('Hello !');
-    res.render('index', { title: 'Express' })
-    }
-);
+app.use(express.static(__dirname + '/public'));
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-    }
-);
+app.get('/', (req,res) =>{
+    res.render('login.hbs');
+});
+
+app.get('/index.hbs', (req,res) =>{
+    res.render('index.hbs');
+});
+
+app.listen(port, ()=> console.log(`app listening to http://localhost:${port}`));
+
+
+
+
+
+
+
 
 

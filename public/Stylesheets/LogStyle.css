@@ -1,0 +1,13 @@
+.secondary-buttons, .signup-form, .login-form{
+    display: none;
+}
+
+
+
+body{
+    background-color: #781010;
+}
+
+form{
+    position:center;
+}
