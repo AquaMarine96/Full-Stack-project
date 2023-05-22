@@ -1,4 +1,4 @@
-.secondary-buttons, .signup-form, .login-form{
+.secondary-buttons, .signup-form, .login-user, .login-admin{
     display: none;
 }
 

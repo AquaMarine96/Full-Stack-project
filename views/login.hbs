@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        {{name}}
+       
     </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito Sans">
     <link rel="stylesheet" href="/Stylesheets/LogStyle.css">
     <script defer src="/scripts/LogScript.js"></script>
 </head>
 <body>
-    <a href = "index.hbs"><img src = "/images/logo.png"></a>
+    <a href = "/homepage.hbs"><img src = "/images/logo.png"></a>
     <div class ="primary-buttons">
         <button id = "user">Student</button>
         <button id = "admin">Staff</button>
@@ -21,17 +21,26 @@
         <button id = "sign-up">Sign Up</button>
         <button id = "log-in">Log In</button>
     </div>
-    <div class ="login-form">
-        <form>
+    <div class ="login-user">
+        <form action = "/homepage.hbs" method = "get">
             <label for="username">Username</label>
             <input type="text" id="log-username" name="username" placeholder="Your username.."><br><br>
             <label for="password">Password</label>
             <input type="text" id="password" name="password" placeholder="Your password.."><br><br>
-            <a href = "/views/index.hbs"><button type = "submit" id = "log-submit">Submit</button></a>
+            <input type = "submit" id = "log-submit"></input>
+        </form>
+    </div>
+    <div class ="login-admin">
+        <form action = "/homepage.hbs" method = "get">
+            <label for="username">Username</label>
+            <input type="text" id="log-username" name="username" placeholder="Your username.."><br><br>
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" placeholder="Your password.."><br><br>
+            <input type = "submit" id = "log-submit"></input>
         </form>
     </div>
     <div class="signup-form">
-        <form>
+        <form action = "/homepage.hbs" method="get">
             <label for="username">Username</label>
             <input type="text" id="sign-username" name="username" placeholder="Your username.."><br><br>
             <label for="email">Email</label>
@@ -40,7 +49,7 @@
             <input type="text" id="password" name="password" placeholder="Your password.."><br><br>
             <label for="password">Confirm Password</label>
             <input type="text" id="password2" name="password" placeholder="Your password.."><br><br>
-            <a href = "/views/index.hbs"><button type="submit" id = "sign-submit" >Submit</button></a><br>
+            <input type = "submit"  id = "sign-submit" ></input>
         </form>
         
     </div>
