@@ -62,7 +62,7 @@ nav{
 button{
     background-color: rgb(128, 19, 0);
     color:white;
-    font-size:20px;
+    font-size:fit-content;
     font-weight:bolder;
     padding:10px;
     margin-top:10px;

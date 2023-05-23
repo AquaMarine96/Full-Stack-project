@@ -1,14 +1,33 @@
 
     {{>index}}
     {{>navbar}}
-    <h1>Welcome {{userName}}</h1>
+    <h1>{{user.firstName}}{{user.lastName}}</h1>
     <h1>Profile</h1>
     <ul>
-        <li>Name:</li>
-        <li>Year:</li>
-        <li>Phone:</li>
-        <li>E-mail</li>
+        <li>Name: {{user.firstName}}{{user.lastName}}</li>
+        <li>Year:{{user.year}}</li>
+        <li>School:{{user.school}}</li>
+        <li>Phone:{{user.phone}}</li>
+        <li>Address:{{user.address}}</li>
+        <li>E-mail{{user.mail}}</li>
     </ul>
-    <ul title = "Transcripts"></ul>
+    <fieldset >
+        <legend>About me</legend>
+        <p>I'm a student in University of Patras</p>
+    </fieldset>
+    <button id = "settings">Επεξεργασία</button>
+    <form action = "/contact.hbs" class = "setProfile" id = "setProfile" style = "display: none;">
+        <input type = "text" placeholder = "Όνομα"><br>
+        <input type = "text" placeholder = "Επώνυμο"><br>
+        <input type = "text" placeholder = "Έτος"><br>
+        <input type = "text" placeholder = "Τηλέφωνο"><br>
+        <input type = "text" placeholder = "E-mail"><br>
+        <input type = "text" placeholder = "Τμήμα"><br>
+        <input type = "text" placeholder = "Διεύθυνση"><br>
+        <input type = "text" placeholder = "Σχόλια"><br>
+        <button id = "save">Αποθήκευση</button>
+    </form>
+    
+    
     
     
