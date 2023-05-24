@@ -30,8 +30,8 @@ let password = document.querySelector("#password")
 let password2 = document.querySelector("#password2")
 
 function blanks(){
-    if (email.value.length == 0 || password.value.length == 0 || password2.value.length == 0 || phone.value.length == 0){
-        //alert("Παρακαλώ συπληρώστε όλα τα πεδία")
+    if (email.value.length == 0 || password.value.length == 0 || password2.value.length == 0 ){
+        alert("Παρακαλώ συπληρώστε όλα τα πεδία")
         console.log("user didnt fill in all the fields")
     };
 };
@@ -76,6 +76,10 @@ function passCheck(){
 }
 
 
+let link = document.createElement("a");
+link.innerHTML = "<a href = 'homepage.hbs'></a>"
+
+
 function isEmail(email) {
     blanks();
     emailVerify();
@@ -83,7 +87,7 @@ function isEmail(email) {
     passCheck();
     if(emailVerify() && passwordVerify() && passCheck()){
         alert("Επιτυχής εγγραφή")
-        window.location.href = "/homepage.hbs"
+        submitSign.appendTo(link);
         
         
     console.log("user entered")
