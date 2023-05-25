@@ -73,11 +73,8 @@ function passCheck(){
         console.log("passwords do not match")
         return false;
 };
-}
+};
 
-
-let link = document.createElement("a");
-link.innerHTML = "<a href = 'homepage.hbs'></a>"
 
 
 function isEmail(email) {
@@ -87,7 +84,7 @@ function isEmail(email) {
     passCheck();
     if(emailVerify() && passwordVerify() && passCheck()){
         alert("Επιτυχής εγγραφή")
-        submitSign.appendTo(link);
+        
         
         
     console.log("user entered")
@@ -102,8 +99,7 @@ function isEmail(email) {
 //Login validation
 
 function loggedIn(){
-    let tagUser = document.querySelector("#user-tag")
-    let logUsername = document.querySelector("#log-username")
+   
     
     
 };

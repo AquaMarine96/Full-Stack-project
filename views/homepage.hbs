@@ -1,20 +1,14 @@
 {{>index}}
 {{>navbar}}
 
-<div class = "events">
-    <div class="slideshow-container">
-        <img src="/images/img1.jpg" alt="Event 1">
-        <img src="/images/img2.jpg" alt="Event 2">
-        <img src="/images/img3.jpg" alt="Event 3">
-        
-        <div class="prev">&#10094;</div>
-        <div class="next">&#10095;</div>
-        
-        <div class="event-title">Event 1</div>
+<div class = "image-slideshow">
+    <div class = "container">
+        <div class = "slide"></div>
+        <div class = "section"></div>
     </div>
     
-    <div class="dots"></div>
-</div>  
+</div>
+<!-- The News -->
 <div class = "news">
     {{#if admin}}
         <button id = "add-news">Προσθήκη ανακοίνωσης</button>

@@ -1,2 +1,44 @@
 {{>index}}
 {{>navbar}}
+
+<h1 class = "guide">Εδώ μπορείτε να επιλέξετε τα μαθήματα που θέλετε να παρακολουθήσετε</h1>
+
+<button id = "change" style = "display:none">Τροποποίηση Δήλωσης</button>
+<button id = "declare">Δήλωση Μαθημάτων</button>
+<form class = "selection" id = "selection" style = "display:none">
+    <fieldset>
+        <legend>Τομέας Η/Υ</legend>
+        <input type = "checkbox" >Εισαγωγή στην Επιστήμη των Υπολογιστών<br>
+        <input type = "checkbox" >Εισαγωγή στην Προγραμματισμό<br>
+        <input type = "checkbox" >Δομές Δεδομένων<br>
+        <input type = "checkbox" >Αρχές Λειτουργικών Συστημάτων<br>
+
+    </fieldset>
+    <fieldset>
+        <legend>Τομέας Ενέργειας</legend>
+        <input type = "checkbox" >Συστήματα Ηλεκτρικής Ενέργειας<br>
+        <input type = "checkbox" >Ηλεκτρικές Μηχανές<br>
+        <input type = "checkbox" >Δίκτυα Ισχύος<br>
+        <input type = "checkbox" >Υψηλές Τάσεις<br>
+    </fieldset>
+    <fieldset>
+        <legend>Τομέας Επικοινωνιών</legend>
+        <input type = "checkbox" >Ψηφιακές Επικοινωνίες<br>
+        <input type = "checkbox" >Ψηφιακή Επεξεργασία Σημάτων<br>
+        <input type = "checkbox" >Ασύρματες Επικοινωνίες<br>
+    </fieldset>
+    <fieldset>
+        <legend>Τομέας Αυτομάτου Ελέγχου</legend>
+        <input type = "checkbox" >Ανάλυση Συστημάτων<br>
+        <input type = "checkbox" >Συστήματα Αυτομάτου Ελέγχου<br>
+        <input type = "checkbox" >Γραμμικός Έλεγχος<br>
+        <input type = "checkbox" >Μη Γραμμικός Έλεγχος<br>
+    </fieldset> 
+    <button type = "submit" id = "save">Αποθήκευση</button>
+</form>
+
+<ul id = "courseList" style = "display:none">Επιλεγμένα μαθήματα</ul>
+
+
+<script defer src = "/scripts/schedule.js"></script>
+
