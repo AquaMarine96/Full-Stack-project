@@ -1,15 +1,20 @@
+console.log("reloaded");
+
 document.addEventListener('DOMContentLoaded', function () {
     let courseForm = document.querySelector('#selection');
     let saveButton = document.querySelector('#save');
     let selectedCoursesList = document.querySelector('#courseList');
     let declareButton = document.querySelector('#declare');
+    let changeButton = document.querySelector('#change');
+
 
     declareButton.addEventListener('click', function () {
-        courseForm.getElementsByClassName.display = "block";
+        courseForm.style.display = "block";
         console.log("clicked");
     });
 
     saveButton.addEventListener('click', function () {
+        // Get all selected courses
         let selectedCourses = courseForm.querySelectorAll('input[type="checkbox"]:checked');
 
         // Clear existing list items
@@ -22,9 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
             listItem.textContent = course.value;
             selectedCoursesList.appendChild(listItem);
         }
-
-        let changeButton = document.querySelector('#change');
+        selectedCoursesList.style.display = "block";
+        
         changeButton.getElementsByClassName.display = 'block';
         courseForm.getElementsByClassName.display = "none";
+        console.log("saved");
     });
 });
