@@ -2,14 +2,16 @@
     display: none;
 }
 
-img{
-    position:center;
+a{
+    display:flex;
+    justify-content:space-around;
+    
    
 }
 
 
 body{
-    background-color: #781010;
+    background-color: #ff3898;
 }
 
 form{
@@ -38,4 +40,18 @@ form{
     width: 100px;
     height: 50px;
     
+}
+
+.primary-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.secondary-buttons{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

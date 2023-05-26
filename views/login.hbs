@@ -12,14 +12,15 @@
     <script defer src="/scripts/LogScript.js"></script>
 </head>
 <body>
-    <a href = "/homepage.hbs"><img src = "/images/logo.png"></a>
+    <a href = "/homepage.hbs"><img class = "main-logo" src = "/images/logo.png"></a>
     <div class ="primary-buttons">
         <button id = "user">Student</button>
         <button id = "admin">Staff</button>
     </div>
-    <div class ="secondary-buttons">
+    <div class ="secondary-buttons" style = "display: none;">
         <button id = "sign-up">Sign Up</button>
         <button id = "log-in">Log In</button>
+        
     </div>
     <div class ="login-user">
         <form action = "homepage.hbs" method = "get">
@@ -28,6 +29,7 @@
             <label for="password">Password</label>
             <input type="text" id="password" name="password" placeholder="Your password.."><br><br>
             <input type = "submit" id = "log-submit"></input>
+            
         </form>
     </div>
     <div class ="login-admin">
@@ -41,21 +43,21 @@
         </form>
     </div>
     <div class="signup-form">
-        <form action = "homepage.hbs" method = "post">
+        <form>
             <label for="username">Username</label>
             <input type="text" id="sign-username" name="username" placeholder="Your username.."><br><br>
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="Your email.."><br><br>
             <label for="password">Password</label>
             <input type="text" id="password" name="password" placeholder="Your password.."><br><br>
-            <label for="password2">Confirm Password</label>
-            <input type="text" id="password2" name="password2" placeholder="Your password.."><br><br>
+            {{!-- <label for="password2">Confirm Password</label>
+            <input type="text" id="password2" name="password2" placeholder="Your password.."><br><br> --}}
             <input type = "submit" id = "sign-submit"></input>
             
         </form>
         
     </div>
-    
+   <a href = "/"><button id = "back" style = "display:none;">Back</button></a>
 </body>
 </html>
 {{> footer}}

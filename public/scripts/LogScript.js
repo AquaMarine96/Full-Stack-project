@@ -1,13 +1,16 @@
 let studButton = document.querySelector("#user");
 let staffButton = document.querySelector("#admin");
+let backButton = document.querySelector("#back");
 
 studButton.addEventListener("click", ()=> {
-    document.querySelector(".secondary-buttons").style.display = "block";
+    document.querySelector(".secondary-buttons").style.display = "flex";
     document.querySelector(".primary-buttons").style.display = "none";
+    backButton.style.display = "block";
 })
 staffButton.addEventListener("click", ()=> {
     document.querySelector(".login-admin").style.display = "block";
     document.querySelector(".primary-buttons").style.display = "none";
+    backButton.style.display = "block";
 })
 
 let signUpButton = document.querySelector("#sign-up");
@@ -16,6 +19,7 @@ let logInButton = document.querySelector("#log-in");
 signUpButton.addEventListener("click", ()=> {
     document.querySelector(".signup-form").style.display = "block";
     document.querySelector(".secondary-buttons").style.display = "none";
+    
 })
 
 logInButton.addEventListener("click", ()=> {
@@ -23,14 +27,17 @@ logInButton.addEventListener("click", ()=> {
     document.querySelector(".secondary-buttons").style.display = "none";
 })
 
+backButton.addEventListener("click", ()=> {
+    backButton.style.display = "none";
+});
+
 //Account validation
 
-let email = document.querySelector("#email")
-let password = document.querySelector("#password")
-let password2 = document.querySelector("#password2")
+
+//let password2 = document.querySelector("#password2")
 
 function blanks(){
-    if (email.value.length == 0 || password.value.length == 0 || password2.value.length == 0 ){
+    if (email.value.length == 0 || password.value.length == 0 ){
         alert("Παρακαλώ συπληρώστε όλα τα πεδία")
         console.log("user didnt fill in all the fields")
     };
@@ -49,9 +56,9 @@ function emailVerify(){
               
 };
 
-function passwordVerify(){
+function passwordVerify(pass){
                 
-    if (/^[a-zA-Z]+\d+[!@#$%^&*]$/.test(password.value)  && password.value.length >= 8){                    
+    if (/^[a-zA-Z]+\d+[!@#$%^&*]$/.test(pass.value)  && pass.value.length >= 8){                    
     return true;  
     }
     else{               
@@ -63,55 +70,73 @@ function passwordVerify(){
 };
 
 
-function passCheck(){
+// function passCheck(pass2){
                                
-    if(password2.value === password.value){
-        return true;   
-    }
-    else{
-        alert("Passwords do not match")
-        console.log("passwords do not match")
-        return false;
-};
-};
+//     if(pass2.value === pass.value){
+//         return true;   
+//     }
+//     else{
+//         alert("Passwords do not match")
+//         console.log("passwords do not match")
+//         return false;
+// };
+// };
 
 
 
-function isEmail(email) {
-    blanks();
-    emailVerify();
-    passwordVerify();
-    passCheck();
-    if(emailVerify() && passwordVerify() && passCheck()){
-        alert("Επιτυχής εγγραφή")
-        
-        
-        
-    console.log("user entered")
-    }
-    else{
-        console.log("not succesfull")
-    };
-    //go to the main page again
+// function isEmail(email) {
+//     blanks();
+//     emailVerify();
+//     passwordVerify();
+//     //passCheck();
+//     if(emailVerify() && passwordVerify() && passCheck()){
+//         alert("Επιτυχής εγγραφή")    
+//     console.log("user entered")
+//     }
+//     else{
+//         console.log("not succesfull")
+//         "/".refreshPage();
+//     };
+//     //go to the main page again
 
-};
+// };
 
 //Login validation
 
-function loggedIn(){
-   
+function loggedIn(form){
+    let submiting = form.querySelector("input[type='submit']");
+    submiting.addEventListener("click", ()=>{
+        let email = form.querySelector("#email")
+        let password = form.querySelector("#password")
+        blanks();
+        emailVerify(email);
+        passwordVerify(password);
+        //passCheck(password);
+        if(emailVerify() && passwordVerify()){
+            alert("Επιτυχής εγγραφή")
+            form.action = "/homepage.hbs"
+            form.method = "GET"    
+        console.log("user entered")
+        }
+        else{
+            console.log("not succesfull")
+            form.action = "#"
+        };
+    });
     
     
 };
 
+let signForm = document.querySelector(".signup-form");
+loggedIn(signForm);
 
 //Submit button for the sign in and log form
 
-let submitSign= document.querySelector("#sign-submit");
-let submitLog = document.querySelector("#log-submit");
+// let submitSign= document.querySelector("#sign-submit");
+// let submitLog = document.querySelector("#log-submit");
 
-submitSign.addEventListener("click", isEmail());
-submitLog.addEventListener("click", loggedIn());
+// submitSign.addEventListener("click", isEmail);
+// submitLog.addEventListener("click", loggedIn);
 
 
 
