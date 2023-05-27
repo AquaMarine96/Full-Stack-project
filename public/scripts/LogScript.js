@@ -56,9 +56,9 @@ function emailVerify(){
               
 };
 
-function passwordVerify(pass){
+function passwordVerify(){
                 
-    if (/^[a-zA-Z]+\d+[!@#$%^&*]$/.test(pass.value)  && pass.value.length >= 8){                    
+    if (/^[a-zA-Z]+\d+[!@#$%^&*]$/.test(password.value)  && password.value.length >= 8){                    
     return true;  
     }
     else{               
@@ -109,18 +109,19 @@ function loggedIn(form){
         let email = form.querySelector("#email")
         let password = form.querySelector("#password")
         blanks();
-        emailVerify(email);
-        passwordVerify(password);
+        emailVerify();
+        passwordVerify();
         //passCheck(password);
         if(emailVerify() && passwordVerify()){
             alert("Επιτυχής εγγραφή")
-            form.action = "/homepage.hbs"
-            form.method = "GET"    
+            form.action = "homapage.hbs"
+            form.method = "POST" 
         console.log("user entered")
         }
         else{
             console.log("not succesfull")
             form.action = "#"
+            form.method = "GET"
         };
     });
     
