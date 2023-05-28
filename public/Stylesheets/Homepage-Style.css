@@ -135,7 +135,7 @@ body {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    background-color: pink;
+    background-color: rgb(129, 1, 23);
     padding: 10px;
     margin: 10px 0;
   }
@@ -152,12 +152,14 @@ body {
   }
   
   .navigation li:hover {
-    background-color: #f1f1f1;
-    color: rgb(254, 220, 226);
+    background-color: #ffffff;
+    color: rgb(128, 19, 0);
+    
+    
   }
   
   .navigation li a:hover {
-    color: rgb(254, 220, 226);
+    color: rgb(128, 19, 0);
   }
   
   a {
@@ -189,6 +191,11 @@ body {
   
   .post {
     margin-bottom: 30px;
+    position:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
   }
   
   .news p {
@@ -199,6 +206,8 @@ body {
   }
   .news li {
     margin-bottom: 20px;
+    text-decoration: none;
+    list-style-type: none;
   }
   
   .news li:hover p {
