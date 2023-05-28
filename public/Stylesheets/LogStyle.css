@@ -9,24 +9,38 @@ a{
    
 }
 
+.container {
+  
+  min-height: 100vh;
+}
+
+.main-logo {
+  max-width: 400px;
+  max-height:300px;
+  margin-bottom: 20px;
+}
+
 button:hover{
   scale:1.1;
 }
 
 body{
-    background-color: #ff3898;
+  background-color: #9d0303;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: rgba(144, 0, 0, 0.5);
-    
+  display: flex;
+  position:center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;;
+  border-radius: 10px;
+  
+  
   }
 
   input[type = 'submit']{
@@ -82,3 +96,99 @@ form{
     flex-direction: row;
     justify-content: space-around;
 }
+
+
+/* Container styles */
+
+
+
+
+
+
+
+/* Logo styles */
+/* .main-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+/* button {
+  background-color: rgb(61, 38, 34);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+} */
+
+/* button:hover {
+  background-color: rgb(128, 19, 0);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+} */
+
+/* .primary-buttons {
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+} */
+
+/* .secondary-buttons {
+  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+} */
+
+/* Form styles */
+/* form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(144, 0, 0, 0.8);
+  width: 300px;
+} */
+
+/* label {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="submit"] {
+  background-color: rgb(61, 38, 34);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(128, 19, 0);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+} */ 
