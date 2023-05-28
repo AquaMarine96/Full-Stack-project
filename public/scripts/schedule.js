@@ -49,19 +49,12 @@ saveButton.addEventListener('click', function (event) {
     coursesDiv.style.display = "block";
 });
 
-changeButton.addEventListener('click', function () {
+changeButton.addEventListener('click', function (event) {
     form.style.display = "block";
     console.log("changed");
     changeButton.style.display = "none";
-    lista.style.display = "none";
+    coursesDiv.style.display = "none";
+    
 });
 
-if(isEmpty("#courseList")){
-    coursesDiv.style.display = "none";
-    declareButton.style.display = "block";
-    changeButton.style.display = "none";    
-}
 
-function isEmpty(id) {
-    return document.getElementById(id).innerHTML.trim() == ""
-  }
