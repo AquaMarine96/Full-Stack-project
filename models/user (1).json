@@ -1,0 +1,25 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"db 1"},
+{"type":"table","name":"user","database":"db 1","data":
+[
+{"id":"1","user_name":"up1056534","password":"ghgjh,ghgjh","email":"up1056534@upnet.gr"},
+{"id":"2","user_name":"up1056586","password":"ghgjh,ghgjh","email":"up1056586@upnet.gr"},
+{"id":"3","user_name":"up1056323","password":"dfdf,dfdf","email":"up1056323@upnet.gr"},
+{"id":"13","user_name":"up1012345","password":"abcd1234,abcd1234","email":"up1012345@upnet.gr"},
+{"id":"14","user_name":"up1023456","password":"abcde123","email":"up1023456@upnet.gr"},
+{"id":"15","user_name":"up1023458","password":"abcd4567","email":"up1023458@upnet.gr"},
+{"id":"16","user_name":"up1045322","password":"abcdef123","email":"up1045322@upnet.gr"},
+{"id":"17","user_name":"up1056222","password":"abcdd123","email":"up1056222@upnet.gr"},
+{"id":"18","user_name":"up1034563","password":"abcc3123","email":"up1034563@upnet.gr"},
+{"id":"19","user_name":"up1098765","password":"aaa23456","email":"up1098765@upnet.gr"},
+{"id":"20","user_name":"up1033445","password":"abccdd3123","email":"up1033445@upnet.gr"},
+{"id":"21","user_name":"up1022334","password":"ece12345","email":"up1022334@upnet.gr"},
+{"id":"22","user_name":"up1022335","password":"ece123456","email":"up1022335@upnet.gr"},
+{"id":"23","user_name":"up1022337","password":"ece22345","email":"up1022337@upnet.gr"},
+{"id":"24","user_name":"","password":"","email":""},
+{"id":"25","user_name":"up1022771","password":"ece22355","email":"up1022771@upnet.gr"},
+{"id":"26","user_name":"","password":"","email":"undefined"}
+]
+}
+]
